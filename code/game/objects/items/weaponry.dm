@@ -552,7 +552,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	base_icon_state = "shadow_staff"
 	lefthand_file = 'yogstation/icons/mob/inhands/antag/darkspawn_lefthand.dmi'
 	righthand_file = 'yogstation/icons/mob/inhands/antag/darkspawn_righthand.dmi'
-	
+
 /obj/item/staff/darkspawn/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/two_handed, \
@@ -645,6 +645,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	throwforce = 10
 	throw_speed = 5
 	throw_range = 2
+	w_class = WEIGHT_CLASS_BULKY
 	attack_verb = list("busted")
 	var/impressiveness = 45
 
