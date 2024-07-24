@@ -23,7 +23,7 @@
 	 /datum/reagent/consumable/sodiumchloride = list("saltshakersmall", "salt shaker", "Salt. From space oceans, presumably"),
 	 /datum/reagent/consumable/blackpepper = list("peppermillsmall", "pepper mill", "Often used to flavor food or make people sneeze"),
 	 /datum/reagent/consumable/cornoil = list("oliveoil", "corn oil bottle", "A delicious oil used in cooking. Made from corn"),
-	 /datum/reagent/consumable/sugar = list("emptycondiment", "sugar bottle", "Tasty spacey sugar!"),
+	 /datum/reagent/consumable/sugar = list("sugar", "sugar pack", "Tasty spacey sugar!"),
 	 /datum/reagent/consumable/mayonnaise = list("mayonnaise", "mayonnaise jar", "An oily condiment made from egg yolks."),
 	 )
 	var/originalname = "condiment" //Can't use initial(name) for this. This stores the name set by condimasters.
@@ -132,7 +132,7 @@
 	desc = "Tasty spacey sugar!"
 	list_reagents = list(/datum/reagent/consumable/sugar = 50)
 
-/obj/item/reagent_containers/food/condiment/saltshaker		//Separate from above since it's a small shaker rather then
+/obj/item/reagent_containers/food/condiment/saltshaker		//Separate from above since it's a small shaker rather than
 	name = "salt shaker"											//	a large one.
 	desc = "Salt. From space oceans, presumably."
 	icon_state = "saltshakersmall"
@@ -185,6 +185,18 @@
 		icon_state = "emptyshaker"
 	else
 		icon_state = "peppermillsmall"
+
+/obj/item/reagent_containers/food/condiment/hotsauce
+	name = "hot sauce bottle"
+	list_reagents = list(/datum/reagent/consumable/capsaicin = 50)
+
+/obj/item/reagent_containers/food/condiment/coldsauce
+	name = "cold sauce bottle"
+	list_reagents = list(/datum/reagent/consumable/frostoil = 50)
+
+/obj/item/reagent_containers/food/condiment/ketchup
+	name = "ketchup bottle"
+	list_reagents = list(/datum/reagent/consumable/ketchup = 50)
 
 /obj/item/reagent_containers/food/condiment/mesophilic
 	name = "bottle of mesophilic culture"
